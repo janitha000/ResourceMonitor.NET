@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Management;
 using ResourceMonitor.Library.Enums;
+using ResourceMonitor.Library.Entities;
 
 namespace ResourceMonitor.Library.Services
 {
-    public class CPUInfoService
+    public class CPUInfoService : IResourceService<CPUInfoData>
     {
         public string  GetCpuInfo(string code)
         {
@@ -23,6 +24,11 @@ namespace ResourceMonitor.Library.Services
                 }
             }
             return searcher.ToString();
+        }
+
+        public CPUInfoData GetData()
+        {
+            throw new NotImplementedException();
         }
     }
 }
