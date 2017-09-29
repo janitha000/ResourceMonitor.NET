@@ -15,7 +15,6 @@ namespace ResourceMonitor.Library.Services
             ManagementObjectSearcher searcher = new ManagementObjectSearcher( "select * from " + code);
             foreach (ManagementObject share in searcher.Get())
             {
-                // Some Codes ...
                 foreach (PropertyData PC in share.Properties)
                 {
                     Console.WriteLine("DD");
