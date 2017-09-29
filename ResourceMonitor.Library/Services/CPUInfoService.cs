@@ -11,9 +11,42 @@ namespace ResourceMonitor.Library.Services
 {
     public class CPUInfoService : IResourceService<CPUInfoData>
     {
-        public string  GetCpuInfo(string code)
+
+
+        public CPUInfoData GetBasicInfo()
         {
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher( "select * from " + code);
+            CPUInfoData info = new CPUInfoData();
+            info.Proccessor = GetCpuInfo(CPUInfoCodes.Processor);
+            info.Memory = GetCpuInfo(CPUInfoCodes.Memory);
+            info.User = GetCpuInfo(CPUInfoCodes.User);
+            info.TimeZone = GetCpuInfo(CPUInfoCodes.TimeZone);
+
+            return info;
+        }
+
+        public CPUInfoData GetAdvancedInfo()
+        {
+            CPUInfoData info = new CPUInfoData();
+            info.Proccessor = GetCpuInfo(CPUInfoCodes.Processor);
+            info.Memory = GetCpuInfo(CPUInfoCodes.Memory);
+            info.User = GetCpuInfo(CPUInfoCodes.User);
+            info.Keyboard = GetCpuInfo(CPUInfoCodes.Keyboard);
+            info.Sound = GetCpuInfo(CPUInfoCodes.Sound);
+            info.Video = GetCpuInfo(CPUInfoCodes.Video);
+            info.BIOS = GetCpuInfo(CPUInfoCodes.Bios);
+            info.Cache = GetCpuInfo(CPUInfoCodes.CacheMemory);
+
+            return info;
+        }
+
+        public CPUInfoData GetData()
+        {
+            return GetBasicInfo();
+        }
+
+        private string GetCpuInfo(string code)
+        {
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("select * from " + code);
             foreach (ManagementObject share in searcher.Get())
             {
                 foreach (PropertyData PC in share.Properties)
@@ -24,11 +57,6 @@ namespace ResourceMonitor.Library.Services
                 }
             }
             return searcher.ToString();
-        }
-
-        public CPUInfoData GetData()
-        {
-            throw new NotImplementedException();
         }
     }
 }
