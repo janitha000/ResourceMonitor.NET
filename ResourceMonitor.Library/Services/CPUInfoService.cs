@@ -4,15 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Management;
+using ResourceMonitor.Library.Enums;
 
 namespace ResourceMonitor.Library.Services
 {
     public class CPUInfoService
     {
-        public string  GetCpuInfo()
+        public string  GetCpuInfo(string code)
         {
-            ManagementObjectSearcher objMOS = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM  Win32_OperatingSystem");
-            return objMOS.ToString();
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher( "select * from " + code);
+            foreach (ManagementObject share in searcher.Get())
+            {
+                // Some Codes ...
+                foreach (PropertyData PC in share.Properties)
+                {
+                    Console.WriteLine("DD");
+                    return PC.Name;
+
+                }
+            }
+            return searcher.ToString();
         }
     }
 }

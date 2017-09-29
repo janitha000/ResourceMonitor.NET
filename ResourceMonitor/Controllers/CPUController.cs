@@ -1,4 +1,5 @@
 ﻿using ResourceMonitor.Library.Entities;
+using ResourceMonitor.Library.Enums;
 using ResourceMonitor.Library.Services;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace ResourceMonitor.Controllers
             try
             {
                 CPUInfoService cpuInfo = new CPUInfoService();
-                string info = cpuInfo.GetCpuInfo();
+                string info = cpuInfo.GetCpuInfo(CPUInfoCodes.CacheMemory);
                 return info;
 
 
