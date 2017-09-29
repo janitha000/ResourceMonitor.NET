@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ResourceMonitor.Library.Services
 {
-    class CPUUsage
+    class CPUUsageService : IResourceService<CPUUsageData>
     {
+        public CPUUsageData GetData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

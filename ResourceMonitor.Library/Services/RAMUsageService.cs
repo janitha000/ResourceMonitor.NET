@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace ResourceMonitor.Library.Services
 {
-    interface IResourceService<TUsageData>
+    class RAMUsageService : IResourceService<RAMUsageData>
     {
-        TUsageData GetData();
+        public RAMUsageData GetData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

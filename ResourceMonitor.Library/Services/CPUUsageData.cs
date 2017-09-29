@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ResourceMonitor.Library.Services
 {
-    class RAMUsage
+    class CPUUsageData
     {
     }
 }

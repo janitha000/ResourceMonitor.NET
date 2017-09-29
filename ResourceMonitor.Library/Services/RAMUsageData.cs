@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ResourceMonitor.Library.Services
 {
-    interface IResourceService<TUsageData>
+    class RAMUsageData
     {
-        TUsageData GetData();
     }
 }
