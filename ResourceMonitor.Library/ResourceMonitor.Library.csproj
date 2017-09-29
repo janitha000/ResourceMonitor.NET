@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Entities\CPUInfo.cs" />
+    <Compile Include="Entities\CPUInfoData.cs" />
     <Compile Include="Enums\CPUInfoCodes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceManager.cs" />
     <Compile Include="Services\CPUInfoService.cs" />
-    <Compile Include="Services\CPUUsage.cs" />
+    <Compile Include="Services\CPUUsageService.cs" />
+    <Compile Include="Entities\CPUUsageData.cs" />
     <Compile Include="Services\IResourceService.cs" />
-    <Compile Include="Services\RAMUsage.cs" />
+    <Compile Include="Services\RAMUsageService.cs" />
+    <Compile Include="Entities\RAMUsageData.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
