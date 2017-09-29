@@ -1,0 +1,4 @@
+E:\Learn\ResourceMonitor\ResourceMonitor.Library\bin\Debug\ResourceMonitor.Library.dll
+E:\Learn\ResourceMonitor\ResourceMonitor.Library\bin\Debug\ResourceMonitor.Library.pdb
+E:\Learn\ResourceMonitor\ResourceMonitor.Library\obj\Debug\ResourceMonitor.Library.dll
+E:\Learn\ResourceMonitor\ResourceMonitor.Library\obj\Debug\ResourceMonitor.Library.pdb
