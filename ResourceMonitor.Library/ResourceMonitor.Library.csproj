@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\CPUInfo.cs" />
     <Compile Include="Entities\CPUInfoData.cs" />
     <Compile Include="Enums\CPUInfoCodes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResourceManager.cs" />
+    <Compile Include="ResourceManagers\CPUInfoResourceManager.cs" />
     <Compile Include="Services\CPUInfoService.cs" />
     <Compile Include="Services\CPUUsageService.cs" />
     <Compile Include="Entities\CPUUsageData.cs" />

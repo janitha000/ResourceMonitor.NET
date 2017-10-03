@@ -17,19 +17,20 @@ namespace ResourceMonitor.Controllers
         public string GetCPUInfo()
         {
 
-            try
-            {
-                CPUInfoService cpuInfo = new CPUInfoService();
-                string info = cpuInfo.GetCpuInfo(CPUInfoCodes.CacheMemory);
-                return info;
+            //try
+            //{
+            //    CPUInfoService cpuInfo = new CPUInfoService();
+            //    string info = cpuInfo.GetCpuInfo(CPUInfoCodes.CacheMemory);
+            //    return info;
 
 
-            }
-            catch (Exception ex)
-            {
-                
-                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.InternalServerError));
-            }
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.InternalServerError));
+            //}
+            return null;
         }
     }
 }

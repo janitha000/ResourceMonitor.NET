@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CPUInfoServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -100,6 +101,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ResourceMonitor.Library\ResourceMonitor.Library.csproj">
+      <Project>{A40D669F-C151-4B45-B527-CCFC1B8854CE}</Project>
+      <Name>ResourceMonitor.Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ResourceMonitor\ResourceMonitor.csproj">
       <Project>{2874A32E-24B0-4372-8D80-D481B2F7AEB9}</Project>
       <Name>ResourceMonitor</Name>
